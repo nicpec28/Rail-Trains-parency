@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-tint: #00daf3;
+  --color-secondary-fixed-dim: #00e676;
+  --color-on-background: #dfe2ed;
+  --color-surface-container-lowest: #0a0e15;
+  --color-on-secondary: #003920;
+  --color-inverse-on-surface: #2d3038;
+  --color-secondary-container: #00ffa3;
+  --color-on-primary-fixed-variant: #004f58;
+  --color-surface-container-high: #262a32;
+  --color-tertiary-fixed: #ffdeac;
+  --color-secondary-fixed: #52ffac;
+  --color-tertiary-container: #ffb020;
+  --color-on-surface: #dfe2ed;
+  --color-tertiary-fixed-dim: #ffb020;
+  --color-surface-variant: #31353d;
+  --color-on-primary-fixed: #001f24;
+  --color-on-secondary-fixed-variant: #005231;
+  --color-inverse-primary: #006875;
+  --color-primary-container: #00e5ff;
+  --color-on-secondary-fixed: #002111;
+  --color-on-surface-variant: #bac9cc;
+  --color-on-tertiary-fixed-variant: #604100;
+  --color-surface-container-highest: #31353d;
+  --color-surface-container: #1c2027;
+  --color-on-secondary-container: #007146;
+  --color-outline-variant: #3b494c;
+  --color-primary-fixed-dim: #00daf3;
+  --color-on-error-container: #ffdad6;
+  --color-secondary: #f5fff5;
+  --color-surface-dim: #10131b;
+  --color-on-tertiary-fixed: #281900;
+  --color-surface: #10131b;
+  --color-outline: #849396;
+  --color-on-error: #690005;
+  --color-primary-fixed: #9cf0ff;
+  --color-background: #10131b;
+  --color-on-tertiary-container: #775200;
+  --color-primary: #c3f5ff;
+  --color-on-primary-container: #00363d;
+  --color-on-tertiary: #432c00;
+  --color-surface-container-low: #181c23;
+  --color-on-primary: #00363d;
+  --color-inverse-surface: #dfe2ed;
+  --color-error: #ff3d57;
+  --color-surface-bright: #353941;
+  --color-error-container: #ff3d57;
+  --color-tertiary: #ffe9cd;
+
+  --font-headline-sm: "Space Grotesk", sans-serif;
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+  --font-headline-xl: "Space Grotesk", sans-serif;
+  --font-label-sm: "JetBrains Mono", monospace;
+  --font-label-md: "JetBrains Mono", monospace;
+  --font-label-lg: "JetBrains Mono", monospace;
+  --font-body-sm: "Geist", sans-serif;
+  --font-body-md: "Geist", sans-serif;
+  --font-body-lg: "Geist", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body-md);
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+

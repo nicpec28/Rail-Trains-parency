@@ -1,0 +1,8 @@
+{
+  "name": "RailGuard Fleet Diagnostics",
+  "description": "Predictive subsystem AI anomaly detection and telemetry diagnostics for railway fleet maintenance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
