@@ -1,0 +1,29 @@
+{
+  "feature_names": [
+    "cool_gap_mean",
+    "cool_gap_p90",
+    "cool_gap_max",
+    "fault_rate",
+    "mode_invalid_rate",
+    "info_invalid_rate",
+    "load_active_rate",
+    "missing_data_rate"
+  ],
+  "best_C": 0.01,
+  "non_nested_lofo_cv_score": 0.9791666666666666,
+  "nested_lofo_cv_score": 0.9791666666666666,
+  "single_feature_baseline_score": 0.8958333333333334,
+  "unsupervised_baseline_scores": {
+    "aggregate_deviation": 0.9166666666666666,
+    "mahalanobis": 0.9791666666666666,
+    "isolation_forest": 0.9583333333333334,
+    "lof": 0.9791666666666666,
+    "pca_reconstruction": 0.4583333333333333,
+    "ensemble_mahalanobis_iforest": 0.9583333333333334
+  },
+  "best_unsupervised_baseline": {
+    "name": "mahalanobis",
+    "score": 0.9791666666666666
+  },
+  "chosen_model": "mahalanobis"
+}

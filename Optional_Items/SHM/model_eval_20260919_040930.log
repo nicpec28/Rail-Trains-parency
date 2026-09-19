@@ -1,0 +1,505 @@
+Logging this run's output to: model_eval_20260919_040930.log
+
+Extracting features from training files...
+
+Zero-damage samples: 0 / 64
+
+Loaded 64 samples with 40 features.
+
+
+================================================================================
+EVALUATION RANDOM STATE: 42
+================================================================================
+
+Dataset: 64 samples
+Features: 40
+
+Evaluation metric: MAPE
+SHM score = max(0, 1 - MAPE)
+
+Lower MAPE = higher SHM score.
+
+
+Sanity-checking monotonic constraint assumptions (Spearman correlation with damage):
+  rms_ac                       spearman r=+0.802 (assumed increasing)
+  peak_to_peak                 spearman r=+0.962 (assumed increasing)
+  max_cycle_range              spearman r=+0.962 (assumed increasing)
+  log_pseudo_damage_m3         spearman r=+0.851 (assumed increasing)
+  log_pseudo_damage_m5         spearman r=+0.998 (assumed increasing)
+
+
+======================================================================
+Evaluating Ridge (L2 Linear)
+Random search iterations: 20
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=22.92)
+VIFSelector: dropping 'cycle_rate' (VIF=12.87)
+VIFSelector: dropping 'total_true_cycles' (VIF=51.49)
+VIFSelector: dropping 'signal_kurtosis' (VIF=6.80)
+VIFSelector: dropping 'mean_crossing_rate' (VIF=5.72)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'mean_stress' (VIF=15.46)
+VIFSelector: dropping 'cycle_rate' (VIF=9.60)
+VIFSelector: dropping 'total_true_cycles' (VIF=38.42)
+VIFSelector: dropping 'mean_crossing_rate' (VIF=5.97)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=20.83)
+VIFSelector: dropping 'mean_crossing_rate' (VIF=6.66)
+VIFSelector: dropping 'total_true_cycles' (VIF=6.09)
+VIFSelector: dropping 'cycle_rate' (VIF=24.36)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'total_true_cycles' (VIF=5.96)
+VIFSelector: dropping 'cycle_rate' (VIF=23.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'mean_stress' (VIF=17.40)
+VIFSelector: dropping 'cycle_rate' (VIF=6.81)
+VIFSelector: dropping 'total_true_cycles' (VIF=27.24)
+VIFSelector: dropping 'signal_kurtosis' (VIF=5.76)
+VIFSelector: dropping 'mean_crossing_rate' (VIF=5.69)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'total_true_cycles' (VIF=8.84)
+VIFSelector: dropping 'cycle_rate' (VIF=35.37)
+VIFSelector: dropping 'signal_kurtosis' (VIF=5.70)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.76)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'mean_stress' (VIF=19.56)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=18.71)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.06)
+VIFSelector: dropping 'total_true_cycles' (VIF=7.65)
+VIFSelector: dropping 'cycle_rate' (VIF=30.62)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'mean_stress' (VIF=18.04)
+VIFSelector: dropping 'cycle_rate' (VIF=7.64)
+VIFSelector: dropping 'total_true_cycles' (VIF=30.57)
+VIFSelector: dropping 'signal_kurtosis' (VIF=6.74)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+VIFSelector: dropping 'mean_stress' (VIF=14.70)
+VIFSelector: dropping 'total_true_cycles' (VIF=6.76)
+VIFSelector: dropping 'cycle_rate' (VIF=27.02)
+
+CV MAPE: 0.170413
+MAPE std: 0.042953
+Estimated SHM score: 0.829587
+
+======================================================================
+Evaluating ElasticNet (L1/L2 Linear)
+Random search iterations: 20
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=22.92)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'mean_stress' (VIF=22.82)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=20.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'mean_stress' (VIF=17.40)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.76)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'mean_stress' (VIF=19.56)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.18)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.06)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'mean_stress' (VIF=18.04)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+
+CV MAPE: 0.127063
+MAPE std: 0.028110
+Estimated SHM score: 0.872937
+
+======================================================================
+Evaluating KNN + PCA (Distance)
+Random search iterations: 20
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'mean_stress' (VIF=15.46)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=20.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'mean_stress' (VIF=17.40)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.76)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'mean_stress' (VIF=19.56)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=18.71)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.18)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'signal_kurtosis' (VIF=8.90)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.06)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'mean_stress' (VIF=18.04)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+VIFSelector: dropping 'mean_stress' (VIF=14.70)
+
+CV MAPE: 0.262653
+MAPE std: 0.071490
+Estimated SHM score: 0.737347
+
+======================================================================
+Evaluating Support Vector Regressor (SVR)
+Random search iterations: 30
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+
+CV MAPE: 0.171599
+MAPE std: 0.050495
+Estimated SHM score: 0.828401
+
+======================================================================
+Evaluating Random Forest (Bagging)
+Random search iterations: 40
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=22.92)
+VIFSelector: dropping 'cycle_rate' (VIF=12.87)
+VIFSelector: dropping 'total_true_cycles' (VIF=51.49)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'mean_stress' (VIF=15.46)
+VIFSelector: dropping 'cycle_rate' (VIF=9.60)
+VIFSelector: dropping 'total_true_cycles' (VIF=38.42)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'mean_stress' (VIF=22.82)
+VIFSelector: dropping 'signal_kurtosis' (VIF=8.19)
+VIFSelector: dropping 'cycle_rate' (VIF=7.77)
+VIFSelector: dropping 'total_true_cycles' (VIF=31.09)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=20.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'mean_stress' (VIF=17.40)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'total_true_cycles' (VIF=8.84)
+VIFSelector: dropping 'cycle_rate' (VIF=35.37)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.76)
+VIFSelector: dropping 'total_true_cycles' (VIF=8.93)
+VIFSelector: dropping 'cycle_rate' (VIF=35.70)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'mean_stress' (VIF=19.56)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=18.71)
+VIFSelector: dropping 'cycle_rate' (VIF=9.53)
+VIFSelector: dropping 'total_true_cycles' (VIF=38.11)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.18)
+VIFSelector: dropping 'cycle_rate' (VIF=8.96)
+VIFSelector: dropping 'total_true_cycles' (VIF=35.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'signal_kurtosis' (VIF=8.90)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.06)
+VIFSelector: dropping 'total_true_cycles' (VIF=7.65)
+VIFSelector: dropping 'cycle_rate' (VIF=30.62)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'mean_stress' (VIF=18.04)
+VIFSelector: dropping 'cycle_rate' (VIF=7.64)
+VIFSelector: dropping 'total_true_cycles' (VIF=30.57)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+VIFSelector: dropping 'mean_stress' (VIF=14.70)
+
+CV MAPE: 0.100029
+MAPE std: 0.024371
+Estimated SHM score: 0.899971
+
+======================================================================
+Evaluating HistGradientBoosting
+Random search iterations: 40
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=22.92)
+VIFSelector: dropping 'cycle_rate' (VIF=12.87)
+VIFSelector: dropping 'total_true_cycles' (VIF=51.49)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'mean_stress' (VIF=22.82)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=20.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'mean_stress' (VIF=17.40)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.76)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'mean_stress' (VIF=19.56)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.18)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.06)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+VIFSelector: dropping 'mean_stress' (VIF=14.70)
+
+CV MAPE: 0.185408
+MAPE std: 0.053347
+Estimated SHM score: 0.814592
+
+======================================================================
+Evaluating XGBoost (Boosting)
+Random search iterations: 40
+======================================================================
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3763.83)
+VIFSelector: dropping 'crest_factor' (VIF=29.86)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=22.92)
+VIFSelector: dropping 'cycle_rate' (VIF=12.87)
+VIFSelector: dropping 'total_true_cycles' (VIF=51.49)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3137.06)
+VIFSelector: dropping 'crest_factor' (VIF=47.24)
+VIFSelector: dropping 'mean_stress' (VIF=15.46)
+VIFSelector: dropping 'cycle_rate' (VIF=9.60)
+VIFSelector: dropping 'total_true_cycles' (VIF=38.42)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3044.01)
+VIFSelector: dropping 'crest_factor' (VIF=39.09)
+VIFSelector: dropping 'mean_stress' (VIF=22.82)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3173.57)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=20.83)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3699.01)
+VIFSelector: dropping 'crest_factor' (VIF=37.54)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=28.33)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4946.67)
+VIFSelector: dropping 'crest_factor' (VIF=39.71)
+VIFSelector: dropping 'mean_stress' (VIF=17.40)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=6335.67)
+VIFSelector: dropping 'crest_factor' (VIF=50.70)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.94)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=4365.63)
+VIFSelector: dropping 'crest_factor' (VIF=72.53)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.76)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2801.22)
+VIFSelector: dropping 'crest_factor' (VIF=25.92)
+VIFSelector: dropping 'mean_stress' (VIF=19.56)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2090.62)
+VIFSelector: dropping 'crest_factor' (VIF=29.99)
+VIFSelector: dropping 'mean_stress' (VIF=18.71)
+VIFSelector: dropping 'cycle_rate' (VIF=9.53)
+VIFSelector: dropping 'total_true_cycles' (VIF=38.11)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3199.86)
+VIFSelector: dropping 'crest_factor' (VIF=35.82)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=19.18)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3420.38)
+VIFSelector: dropping 'mean_stress' (VIF=42.28)
+VIFSelector: dropping 'crest_factor' (VIF=29.05)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3732.02)
+VIFSelector: dropping 'crest_factor' (VIF=44.19)
+VIFSelector: dropping 'swt_over_raw_m3' (VIF=24.06)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=3666.68)
+VIFSelector: dropping 'crest_factor' (VIF=42.10)
+VIFSelector: dropping 'mean_stress' (VIF=18.04)
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2899.22)
+VIFSelector: dropping 'crest_factor' (VIF=35.48)
+VIFSelector: dropping 'mean_stress' (VIF=14.70)
+
+CV MAPE: 0.175679
+MAPE std: 0.034195
+Estimated SHM score: 0.824321
+
+================================================================================
+FINAL LEADERBOARD — RANKED BY CV MAPE
+================================================================================
+1. Random Forest (Bagging)          | MAPE: 0.100029 | SHM score: 0.899971 | std: 0.024371
+2. ElasticNet (L1/L2 Linear)        | MAPE: 0.127063 | SHM score: 0.872937 | std: 0.028110
+3. Ridge (L2 Linear)                | MAPE: 0.170413 | SHM score: 0.829587 | std: 0.042953
+4. Support Vector Regressor (SVR)   | MAPE: 0.171599 | SHM score: 0.828401 | std: 0.050495
+5. XGBoost (Boosting)               | MAPE: 0.175679 | SHM score: 0.824321 | std: 0.034195
+6. HistGradientBoosting             | MAPE: 0.185408 | SHM score: 0.814592 | std: 0.053347
+7. KNN + PCA (Distance)             | MAPE: 0.262653 | SHM score: 0.737347 | std: 0.071490
+================================================================================
+
+Winning model: Random Forest (Bagging)
+Expected CV MAPE: 0.100029
+Estimated SHM score: 0.899971
+
+Refitting hyperparameter search on 100% of training data...
+VIFSelector: dropping 'cycles_below_bin_floor' (VIF=2625.96)
+VIFSelector: dropping 'crest_factor' (VIF=28.16)
+VIFSelector: dropping 'mean_stress' (VIF=14.29)
+
+======================================================================
+FINAL MODEL DIAGNOSTICS
+======================================================================
+Train MAPE: 0.033281
+Train SHM-equivalent: 0.966719
+Nested CV MAPE: 0.100029
+Estimated CV SHM score: 0.899971
+MAPE std: 0.024371
+Overfit gap: 0.066748
+======================================================================
+
+[WARNING] Train MAPE is substantially lower than CV MAPE.
+This may indicate overfitting.
+
+Winning hyperparameters:
+  regressor__model__max_depth: 10
+  regressor__model__max_features: 1.0
+  regressor__model__min_samples_leaf: 3
+  regressor__model__min_samples_split: 6
+  regressor__model__n_estimators: 162
+  regressor__vif__threshold: 6.998347108741797
+
+Computing permutation feature importance on the final model (in-sample)...
+
+Top features by permutation importance (mean MAPE-score drop when shuffled):
+  1. log_pseudo_damage_m5         +1.80381 +/- 0.17203
+  2. cycle_bin_21_frac            +0.20994 +/- 0.02165
+  3. max_cycle_range              +0.14921 +/- 0.01637
+  4. peak_to_peak                 +0.13667 +/- 0.01415
+  5. log_pseudo_damage_m3         +0.08920 +/- 0.00967
+  6. rms_ac                       +0.00792 +/- 0.00205
+  7. cycle_bin_17_frac            +0.00532 +/- 0.00098
+  8. cycle_bin_20_frac            +0.00489 +/- 0.00074
+  9. cycle_bin_19_frac            +0.00383 +/- 0.00064
+  10. cycle_bin_3_frac             +0.00171 +/- 0.00051
+  11. cycle_bin_12_frac            +0.00134 +/- 0.00034
+  12. cycle_bin_14_frac            +0.00071 +/- 0.00020
+  13. cycle_bin_18_frac            +0.00070 +/- 0.00027
+  14. cycle_bin_15_frac            +0.00066 +/- 0.00023
+  15. cycle_bin_11_frac            +0.00053 +/- 0.00026
+
+Saved model to:
+best_fatigue_model_seed_42.pkl

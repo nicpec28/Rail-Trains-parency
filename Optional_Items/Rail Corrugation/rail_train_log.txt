@@ -1,0 +1,40 @@
+Full dataset: 272 files, 1161 raw features
+Normal     234
+Side II     24
+Side I      14
+
+Running nested CV (5-fold outer / 3-fold inner) for 6 candidates at 3 seeds ([42, 7, 123]) - class-weighted, no resampling...
+  seed=42 lasso           macro F1 = 0.6116
+  seed=42 ridge           macro F1 = 0.6066
+  seed=42 decision_tree   macro F1 = 0.4411
+  seed=42 random_forest   macro F1 = 0.5192
+  seed=42 svm             macro F1 = 0.6237
+  seed=42 xgboost         macro F1 = 0.5517
+  seed=7 lasso           macro F1 = 0.5697
+  seed=7 ridge           macro F1 = 0.5601
+  seed=7 decision_tree   macro F1 = 0.4886
+  seed=7 random_forest   macro F1 = 0.6152
+  seed=7 svm             macro F1 = 0.5695
+  seed=7 xgboost         macro F1 = 0.5875
+  seed=123 lasso           macro F1 = 0.6131
+  seed=123 ridge           macro F1 = 0.6055
+  seed=123 decision_tree   macro F1 = 0.5163
+  seed=123 random_forest   macro F1 = 0.5776
+  seed=123 svm             macro F1 = 0.6698
+  seed=123 xgboost         macro F1 = 0.5989
+
+Across-seed summary (mean macro F1, sorted by mean):
+                   mean       std       min       max
+model                                                
+svm            0.620978  0.050193  0.569491  0.669767
+lasso          0.598135  0.024673  0.569658  0.613119
+ridge          0.590761  0.026531  0.560133  0.606646
+xgboost        0.579344  0.024597  0.551715  0.598858
+random_forest  0.570681  0.048361  0.519250  0.615236
+decision_tree  0.482013  0.037995  0.441149  0.516272
+
+>>> Selected model: svm (mean macro F1=0.6210 +/- 0.0502 across 3 seeds)
+Final hyperparameters: {'clf__C': 1, 'clf__gamma': 0.01}
+
+Saved trained pipeline (fit on all 272 labelled files) -> rail_model.pkl
+Saved run summary -> cv_results.json
